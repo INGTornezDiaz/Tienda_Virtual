@@ -26,10 +26,10 @@ class Mysql extends Conexion
     	return $lastInsert;
     }
     //Busca un registro
-    public function select(string $query)
-    {
-    	$this->strquery = $query;
-    	$result = $this->
-    }
+   # public function select(string $query)
+    #{
+	#	$this->strquery = $query;
+    #	$result = $this->
+    #}
 }
 ?>
