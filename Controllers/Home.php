@@ -5,20 +5,16 @@ class Home extends Controllers{
 		parent::__construct();
 	} 
 
-	public function home($parems)
+	public function home()
 	{
-		$this->views->getViews($this,"home");
+		//Informacion de vistas hacia los controladores
+		$data['page_id'] = 1;
+		$data['tag_page'] = "Home";
+		$data['page_title'] = "Página Principal";
+		$data['page_name'] = "Home";
+		$data['page_content'] = "Lorem";
+		$this->views->getViews($this, "home", $data);
 	}
 
-	public function datos($params)
-	{
-		echo "Datos recibidos:".$params;
-	}
-
-	public function carrito($params)
-	{
-		$carrito = $this->model->getCarrito($params);
-		echo $carrito;
-	}
 }
 ?>

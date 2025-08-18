@@ -3,12 +3,15 @@ class HomeModel
 {
 	public function __construct()
 	{
-		//echo "Mesaje desde el modelo home"
+		parent::__construct();
 	}	
 
-	public function getCarrito($params)
+	public function setUser(string $nombre, int $edad)
 	{
-		return "Datos del carrito No. ".$params;
+		$query_insert = "INSERT INTO usuairo(nombre,edad) VALUES(?,?)";
+		$arrData = array($nombre,$edad);
+		$request_insert = $this->insert($query_insert,$arrData);
+		return $request_insert;
 	}
 }
 ?>
