@@ -52,5 +52,13 @@ class Mysql extends Conexion
         $resExecute = $update->execute($this->arrValues);
         return $resExecute;
     }
+    //Elminar usuario
+    public function delete(string $query)
+    {
+        $this->strquery = $query;
+        $result = $this->conexion->prepare($this->$strquery);
+        $result->execute();
+        return $result;
+    }
 }
 ?>
