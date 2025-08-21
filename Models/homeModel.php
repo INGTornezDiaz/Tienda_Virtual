@@ -3,7 +3,7 @@ class HomeModel
 {
 	public function __construct()
 	{
-		parent::__construct();
+		// No parent constructor to call
 	}	
 
 	public function setUser(string $nombre, int $edad)
@@ -15,3 +15,4 @@ class HomeModel
 	}
 }
 ?>
+

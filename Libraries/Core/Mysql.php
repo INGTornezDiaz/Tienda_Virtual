@@ -11,7 +11,7 @@ class Mysql extends Conexion
         $this->conexion = $this->conexion->conect();
     }
     //METODO PARA INSERTAR USUARIOS EN LA BASE DE DATOS
-    public function insert(string $nombre, int $telefono, string $email)
+    public function insert(string $query, array $arrValues)
     {
     	$this->strquery = $strquery;
     	$this->arrValues = $arrValues;
@@ -26,10 +26,31 @@ class Mysql extends Conexion
     	return $lastInsert;
     }
     //Busca un registro
-   # public function select(string $query)
-    #{
-	#	$this->strquery = $query;
-    #	$result = $this->
-    #}
+   public function select(string $query)
+    {
+		$this->strquery = $query;
+    	$result = $this->conexion->prepare($this->strquery);
+        $result->execute();
+        $data = $result->fetch(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    //Devuelve todos los registros
+    public function select_all(string $query)
+    {
+        $this->strquery = $query;
+        $result = $this->conexion->prepare($this->strquery);
+        $result->execute();
+        $data = $result->fetchall(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    //Actualiza registros
+    public function update(sting $query, array $arrValues)
+    {
+        $this->strquery = $query;
+        $this->arrValues = $arrValues;
+        $update = $this->conexion->prepare($this->strquery);
+        $resExecute = $update->execute($this->arrValues);
+        return $resExecute;
+    }
 }
 ?>
