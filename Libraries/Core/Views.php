@@ -13,4 +13,4 @@ class Views
 		require_once($view);
 	}
 }
-?>
+?>																																																				

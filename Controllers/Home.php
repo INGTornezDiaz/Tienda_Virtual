@@ -16,5 +16,15 @@ class Home extends Controllers{
 		$this->views->getViews($this, "home", $data);
 	}
 
+	public function insertar()
+	{
+		$data = $this->model->setUser("Apolinar",18);
+		print_r($data);
+	}
+	public function verusuario($id){
+		$data = $this->model->getUser($id);
+		print_r($data);
+	}
+
 }
 ?>
