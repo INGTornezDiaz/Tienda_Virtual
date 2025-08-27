@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión | BanyanTreeAccess</title>
-    <link rel="stylesheet" href="Views\Styles\styles_login.css">
+    <link rel="stylesheet" href="../Styles/styles_login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="login-container">
         <div class="logo">
-            <img src="Views\img\logo_banyan_tree.webp" alt="Logo de Banyan Tree">
+            <img src="../img/logo_banyan_tree.webp" alt="Logo de Banyan Tree">
         </div>
         <h1>Bienvenido a BanyanTreeAccess</h1>
         <h2>Iniciar Sesión</h2>
